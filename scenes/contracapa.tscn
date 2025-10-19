@@ -1,0 +1,124 @@
+[gd_scene load_steps=8 format=3 uid="uid://bnbk10d0yr8eb"]
+
+[ext_resource type="Texture2D" uid="uid://b7kwvxrrynar5" path="res://assets/botoes/ant.png" id="1_flkh2"]
+[ext_resource type="Texture2D" uid="uid://46fm0nqpror2" path="res://assets/botoes/som-ligado.png" id="1_wchhy"]
+[ext_resource type="Texture2D" uid="uid://bh4b8b8fmreo3" path="res://assets/botoes/ant-pressionado.png" id="2_j3rsq"]
+[ext_resource type="Texture2D" uid="uid://dnqbwrtos4r5a" path="res://assets/botoes/som-desligado.png" id="2_xqu7j"]
+[ext_resource type="Script" uid="uid://8uqly684mmy8" path="res://scripts/botoes.gd" id="3_flkh2"]
+[ext_resource type="Texture2D" uid="uid://u45njgodo2xm" path="res://assets/botoes/inicio.png" id="4_wchhy"]
+[ext_resource type="Texture2D" uid="uid://bs25nwovpxxh3" path="res://assets/botoes/inicio-pressionado.png" id="5_xqu7j"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.2, 0.305882, 0.372549, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="GridContainer" type="GridContainer" parent="ColorRect/MarginContainer"]
+layout_mode = 2
+
+[node name="BotaoSom" type="TextureButton" parent="ColorRect/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+toggle_mode = true
+texture_normal = ExtResource("1_wchhy")
+texture_pressed = ExtResource("2_xqu7j")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ColorRect/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/MarginContainer/GridContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 96)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 40
+text = "Desigualdades no Brasil
+"
+vertical_alignment = 1
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="ColorRect/MarginContainer/GridContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 24
+text = "Autor: João de Barros e Silva Neto
+
+2025.2
+
+Orientador: Prof. Ewerton Mendonça
+
+Disciplina: Computação Gráfica e Sistemas Multimídia"
+fit_content = true
+vertical_alignment = 1
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="ColorRect/MarginContainer/GridContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 32
+text = "Referências
+"
+fit_content = true
+vertical_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="ColorRect/MarginContainer/GridContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 24
+text = "TOMAZI, Nelson Dacio; ROSSI, Marco Antonio. Sociologia para o ensino médio – Volume único. 5. ed. São Paulo: Saraiva, 2016.
+
+Varios Autores. Moderna plus sociologia em movimento. 1. ed. São Paulo: Saraiva, 2024."
+fit_content = true
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+alignment = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/MarginContainer/GridContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="PagAnteriorBotao" type="TextureButton" parent="ColorRect/MarginContainer/GridContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 3
+texture_normal = ExtResource("1_flkh2")
+texture_pressed = ExtResource("2_j3rsq")
+script = ExtResource("3_flkh2")
+
+[node name="PagInicialBotao" type="TextureButton" parent="ColorRect/MarginContainer/GridContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 3
+texture_normal = ExtResource("4_wchhy")
+texture_pressed = ExtResource("5_xqu7j")
+script = ExtResource("3_flkh2")
+
+[connection signal="pressed" from="ColorRect/MarginContainer/GridContainer/VBoxContainer/HBoxContainer/PagAnteriorBotao" to="ColorRect/MarginContainer/GridContainer/VBoxContainer/HBoxContainer/PagAnteriorBotao" method="pagAnterior"]
+[connection signal="pressed" from="ColorRect/MarginContainer/GridContainer/VBoxContainer/HBoxContainer/PagInicialBotao" to="ColorRect/MarginContainer/GridContainer/VBoxContainer/HBoxContainer/PagInicialBotao" method="voltarInicio"]

@@ -1,0 +1,79 @@
+[gd_scene load_steps=8 format=3 uid="uid://ckmc8p43gjk5p"]
+
+[ext_resource type="Texture2D" uid="uid://46fm0nqpror2" path="res://assets/botoes/som-ligado.png" id="1_ut08a"]
+[ext_resource type="Texture2D" uid="uid://dnqbwrtos4r5a" path="res://assets/botoes/som-desligado.png" id="2_7fxf2"]
+[ext_resource type="Texture2D" uid="uid://b7kwvxrrynar5" path="res://assets/botoes/ant.png" id="2_ut08a"]
+[ext_resource type="Texture2D" uid="uid://bh4b8b8fmreo3" path="res://assets/botoes/ant-pressionado.png" id="3_7fxf2"]
+[ext_resource type="Script" uid="uid://8uqly684mmy8" path="res://scripts/botoes.gd" id="3_oeitw"]
+[ext_resource type="Texture2D" uid="uid://y5y0okhxn2o4" path="res://assets/botoes/prox.png" id="5_w5iou"]
+[ext_resource type="Texture2D" uid="uid://br0w3x4rnlfr7" path="res://assets/botoes/prox-pressionado.png" id="6_rugeq"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.937255, 0.937255, 0.937255, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="BotaoSom" type="TextureButton" parent="ColorRect/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+toggle_mode = true
+texture_normal = ExtResource("1_ut08a")
+texture_pressed = ExtResource("2_7fxf2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="PagAnteriorBotao" type="TextureButton" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 3
+texture_normal = ExtResource("2_ut08a")
+texture_pressed = ExtResource("3_7fxf2")
+script = ExtResource("3_oeitw")
+
+[node name="Pag" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_colors/font_outline_color = Color(0.858824, 0.521569, 0.298039, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 32
+text = "4"
+
+[node name="ProxPagBotao" type="TextureButton" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 3
+texture_normal = ExtResource("5_w5iou")
+texture_pressed = ExtResource("6_rugeq")
+script = ExtResource("3_oeitw")
+
+[connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/PagAnteriorBotao" to="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/PagAnteriorBotao" method="pagAnterior"]
+[connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/ProxPagBotao" to="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/ProxPagBotao" method="proxPag"]
