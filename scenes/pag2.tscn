@@ -66,6 +66,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
 texture = ExtResource("3_nowsn")
+stretch_mode = 5
 
 [node name="MarginContainer2" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer2"]
 layout_mode = 2
@@ -100,7 +101,7 @@ text = "2"
 
 [node name="ProxPagBotao" type="TextureButton" parent="ColorRect/MarginContainer/VBoxContainer2/MarginContainer2/MarginContainer/HBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 10
+size_flags_horizontal = 8
 size_flags_vertical = 6
 texture_normal = ExtResource("4_nowsn")
 texture_pressed = ExtResource("5_jpurx")

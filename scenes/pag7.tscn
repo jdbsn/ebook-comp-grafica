@@ -107,7 +107,7 @@ text = "7"
 
 [node name="ProxPagBotao" type="TextureButton" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 10
+size_flags_horizontal = 8
 size_flags_vertical = 6
 texture_normal = ExtResource("4_s36pb")
 texture_pressed = ExtResource("5_btp4b")

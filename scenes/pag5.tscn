@@ -52,7 +52,6 @@ texture_pressed = ExtResource("2_cn5eh")
 
 [node name="MarginContainer" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 3
 theme_override_constants/margin_top = 40
 
 [node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer"]
@@ -67,9 +66,9 @@ fit_content = true
 
 [node name="TextureRect" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 4
+size_flags_vertical = 3
 texture = ExtResource("3_yx5o1")
-stretch_mode = 2
+stretch_mode = 5
 
 [node name="MarginContainer2" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -104,7 +103,7 @@ text = "5"
 
 [node name="ProxPagBotao" type="TextureButton" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 10
+size_flags_horizontal = 8
 size_flags_vertical = 6
 texture_normal = ExtResource("5_yx5o1")
 texture_pressed = ExtResource("6_lm0vn")
