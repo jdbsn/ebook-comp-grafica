@@ -75,11 +75,16 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("2_lurbu")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect/MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer/MarginContainer"]
 layout_mode = 2
 size_flags_vertical = 8
 
-[node name="ProxPagBotao" type="TextureButton" parent="ColorRect/MarginContainer/VBoxContainer"]
+[node name="ProxPagBotao" type="TextureButton" parent="ColorRect/MarginContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 3
@@ -87,4 +92,4 @@ texture_normal = ExtResource("1_1k6fu")
 texture_pressed = ExtResource("2_5jfhh")
 script = ExtResource("4_wsrbi")
 
-[connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/ProxPagBotao" to="ColorRect/MarginContainer/VBoxContainer/ProxPagBotao" method="proxPag"]
+[connection signal="pressed" from="ColorRect/MarginContainer/MarginContainer/VBoxContainer/ProxPagBotao" to="ColorRect/MarginContainer/MarginContainer/VBoxContainer/ProxPagBotao" method="proxPag"]

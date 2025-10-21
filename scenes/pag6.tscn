@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://u05ow48ucu4m"]
+[gd_scene load_steps=10 format=3 uid="uid://u05ow48ucu4m"]
 
 [ext_resource type="Texture2D" uid="uid://b7kwvxrrynar5" path="res://assets/botoes/ant.png" id="1_0nxt6"]
 [ext_resource type="Texture2D" uid="uid://46fm0nqpror2" path="res://assets/botoes/som-ligado.png" id="1_pmkkt"]
 [ext_resource type="Texture2D" uid="uid://dnqbwrtos4r5a" path="res://assets/botoes/som-desligado.png" id="2_erphp"]
 [ext_resource type="Texture2D" uid="uid://bh4b8b8fmreo3" path="res://assets/botoes/ant-pressionado.png" id="2_rq8jv"]
+[ext_resource type="Texture2D" uid="uid://dpnt7s3r3seah" path="res://assets/barra.png" id="3_erphp"]
 [ext_resource type="Script" uid="uid://8uqly684mmy8" path="res://scripts/botoes.gd" id="3_pmkkt"]
+[ext_resource type="Texture2D" uid="uid://b6tpjgyhiraes" path="res://assets/pag6.png" id="3_qslgd"]
 [ext_resource type="Texture2D" uid="uid://y5y0okhxn2o4" path="res://assets/botoes/prox.png" id="4_erphp"]
 [ext_resource type="Texture2D" uid="uid://br0w3x4rnlfr7" path="res://assets/botoes/prox-pressionado.png" id="5_qslgd"]
 
@@ -37,29 +39,58 @@ theme_override_constants/margin_top = 40
 theme_override_constants/margin_right = 40
 theme_override_constants/margin_bottom = 40
 
-[node name="BotaoSom" type="TextureButton" parent="ColorRect/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer"]
+layout_mode = 2
+
+[node name="BotaoSom" type="TextureButton" parent="ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
+size_flags_vertical = 4
 toggle_mode = true
 texture_normal = ExtResource("1_pmkkt")
 texture_pressed = ExtResource("2_erphp")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 8
+theme_override_constants/margin_top = 40
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 24
+text = "No Brasil, a taxa de analfabetismo entre negros é mais que o dobro da de brancos, e tende a aumentar conforme se observa a idade do grupo."
+fit_content = true
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+texture = ExtResource("3_qslgd")
+
+[node name="MarginContainer2" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="PagAnteriorBotao" type="TextureButton" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+texture = ExtResource("3_erphp")
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer"]
+layout_mode = 2
+
+[node name="PagAnteriorBotao" type="TextureButton" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
-size_flags_vertical = 3
+size_flags_vertical = 6
 texture_normal = ExtResource("1_0nxt6")
 texture_pressed = ExtResource("2_rq8jv")
 script = ExtResource("3_pmkkt")
 
-[node name="Pag" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="Pag" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
 theme_override_colors/font_outline_color = Color(0.858824, 0.521569, 0.298039, 1)
@@ -67,13 +98,13 @@ theme_override_constants/outline_size = 6
 theme_override_font_sizes/font_size = 32
 text = "6"
 
-[node name="ProxPagBotao" type="TextureButton" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="ProxPagBotao" type="TextureButton" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 10
-size_flags_vertical = 3
+size_flags_vertical = 6
 texture_normal = ExtResource("4_erphp")
 texture_pressed = ExtResource("5_qslgd")
 script = ExtResource("3_pmkkt")
 
-[connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/PagAnteriorBotao" to="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/PagAnteriorBotao" method="pagAnterior"]
-[connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/ProxPagBotao" to="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/ProxPagBotao" method="proxPag"]
+[connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer/PagAnteriorBotao" to="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer/PagAnteriorBotao" method="pagAnterior"]
+[connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer/ProxPagBotao" to="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer/ProxPagBotao" method="proxPag"]
