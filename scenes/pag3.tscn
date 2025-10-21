@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://duklyssafdxm"]
+[gd_scene load_steps=9 format=3 uid="uid://duklyssafdxm"]
 
 [ext_resource type="Texture2D" uid="uid://46fm0nqpror2" path="res://assets/botoes/som-ligado.png" id="1_4lmlo"]
 [ext_resource type="Texture2D" uid="uid://clo43fp1hbk28" path="res://assets/pag3.png" id="1_ix1kx"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://b7kwvxrrynar5" path="res://assets/botoes/ant.png" id="2_4lmlo"]
 [ext_resource type="Texture2D" uid="uid://dnqbwrtos4r5a" path="res://assets/botoes/som-desligado.png" id="2_ix1kx"]
 [ext_resource type="Texture2D" uid="uid://bh4b8b8fmreo3" path="res://assets/botoes/ant-pressionado.png" id="3_ix1kx"]
-[ext_resource type="Texture2D" uid="uid://d2hlt346ua06k" path="res://assets/pag3-barra.png" id="4_ix1kx"]
 [ext_resource type="Texture2D" uid="uid://y5y0okhxn2o4" path="res://assets/botoes/prox.png" id="6_11ls1"]
 [ext_resource type="Texture2D" uid="uid://br0w3x4rnlfr7" path="res://assets/botoes/prox-pressionado.png" id="7_0gmev"]
 
@@ -18,28 +17,19 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.937255, 0.937255, 0.937255, 1)
-
-[node name="TextureRect" type="TextureRect" parent="ColorRect"]
+[node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -683.0
+offset_top = -1024.0
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_vertical = 3
 texture = ExtResource("1_ix1kx")
 
-[node name="MarginContainer" type="MarginContainer" parent="ColorRect"]
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -51,10 +41,10 @@ theme_override_constants/margin_top = 40
 theme_override_constants/margin_right = 40
 theme_override_constants/margin_bottom = 40
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer"]
 layout_mode = 2
 
-[node name="BotaoSom" type="TextureButton" parent="ColorRect/MarginContainer/VBoxContainer"]
+[node name="BotaoSom" type="TextureButton" parent="TextureRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
@@ -62,35 +52,29 @@ toggle_mode = true
 texture_normal = ExtResource("1_4lmlo")
 texture_pressed = ExtResource("2_ix1kx")
 
-[node name="MarginContainer" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/margin_top = 40
 
-[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect/MarginContainer/VBoxContainer/MarginContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 24
-text = "Da metade do século XIX até o início do século XX, outros milhares de imigrantes vieram ao Brasil em busca de trabalho e de melhores oportunidades de vida, mas encontraram condições de trabalho quase servis nas fazendas de café e também nas cidades."
+text = "Da metade do século XIX até o início do século XX, outros milhares de imigrantes vieram ao Brasil em busca de tra-balho e de melhores oportunidades de vida, mas encon-traram condições de trabalho quase servis nas fazendas de café e também nas cidades."
 fit_content = true
 
-[node name="MarginContainer2" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer2"]
-layout_mode = 2
-texture = ExtResource("4_ix1kx")
-
-[node name="MarginContainer" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer2"]
+[node name="MarginContainer2" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 9
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/MarginContainer2"]
 layout_mode = 2
 
-[node name="PagAnteriorBotao" type="TextureButton" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer"]
+[node name="PagAnteriorBotao" type="TextureButton" parent="TextureRect/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 6
@@ -98,7 +82,7 @@ texture_normal = ExtResource("2_4lmlo")
 texture_pressed = ExtResource("3_ix1kx")
 script = ExtResource("1_pirr3")
 
-[node name="Pag" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer"]
+[node name="Pag" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
 theme_override_colors/font_outline_color = Color(0.858824, 0.521569, 0.298039, 1)
@@ -106,7 +90,7 @@ theme_override_constants/outline_size = 6
 theme_override_font_sizes/font_size = 32
 text = "3"
 
-[node name="ProxPagBotao" type="TextureButton" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer"]
+[node name="ProxPagBotao" type="TextureButton" parent="TextureRect/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 10
 size_flags_vertical = 6
@@ -114,5 +98,5 @@ texture_normal = ExtResource("6_11ls1")
 texture_pressed = ExtResource("7_0gmev")
 script = ExtResource("1_pirr3")
 
-[connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer/PagAnteriorBotao" to="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer/PagAnteriorBotao" method="pagAnterior"]
-[connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer/ProxPagBotao" to="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer/ProxPagBotao" method="proxPag"]
+[connection signal="pressed" from="TextureRect/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer/PagAnteriorBotao" to="TextureRect/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer/PagAnteriorBotao" method="pagAnterior"]
+[connection signal="pressed" from="TextureRect/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer/ProxPagBotao" to="TextureRect/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer/ProxPagBotao" method="proxPag"]

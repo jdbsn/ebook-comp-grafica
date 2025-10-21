@@ -63,7 +63,8 @@ fit_content = true
 
 [node name="TextureRect" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer2"]
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_horizontal = 4
+size_flags_vertical = 6
 texture = ExtResource("3_nowsn")
 
 [node name="MarginContainer2" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer2"]
@@ -75,8 +76,8 @@ texture = ExtResource("4_jpurx")
 
 [node name="MarginContainer" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer2/MarginContainer2"]
 layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_right = 10
+theme_override_constants/margin_left = 11
+theme_override_constants/margin_right = 11
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer2/MarginContainer2/MarginContainer"]
 layout_mode = 2
