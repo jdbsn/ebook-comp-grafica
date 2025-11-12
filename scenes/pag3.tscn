@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://duklyssafdxm"]
+[gd_scene load_steps=12 format=3 uid="uid://duklyssafdxm"]
 
 [ext_resource type="Texture2D" uid="uid://46fm0nqpror2" path="res://assets/botoes/som-ligado.png" id="1_4lmlo"]
 [ext_resource type="Texture2D" uid="uid://clo43fp1hbk28" path="res://assets/pag3.png" id="1_ix1kx"]
@@ -6,9 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://b7kwvxrrynar5" path="res://assets/botoes/ant.png" id="2_4lmlo"]
 [ext_resource type="Texture2D" uid="uid://dnqbwrtos4r5a" path="res://assets/botoes/som-desligado.png" id="2_ix1kx"]
 [ext_resource type="Texture2D" uid="uid://bh4b8b8fmreo3" path="res://assets/botoes/ant-pressionado.png" id="3_ix1kx"]
+[ext_resource type="Script" uid="uid://dafkkh1vraftq" path="res://scripts/narracao.gd" id="4_7hdir"]
 [ext_resource type="Texture2D" uid="uid://d2hlt346ua06k" path="res://assets/pag3-barra.png" id="4_ix1kx"]
 [ext_resource type="Texture2D" uid="uid://y5y0okhxn2o4" path="res://assets/botoes/prox.png" id="6_11ls1"]
 [ext_resource type="Texture2D" uid="uid://br0w3x4rnlfr7" path="res://assets/botoes/prox-pressionado.png" id="7_0gmev"]
+[ext_resource type="AudioStream" uid="uid://cnmeabehkongw" path="res://assets/narracoes/pag3.ogg" id="11_11ls1"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -58,10 +60,10 @@ layout_mode = 2
 [node name="BotaoSom" type="TextureButton" parent="ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
-size_flags_vertical = 4
 toggle_mode = true
-texture_normal = ExtResource("1_4lmlo")
-texture_pressed = ExtResource("2_ix1kx")
+texture_normal = ExtResource("2_ix1kx")
+texture_pressed = ExtResource("1_4lmlo")
+script = ExtResource("4_7hdir")
 
 [node name="MarginContainer" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -119,5 +121,10 @@ texture_normal = ExtResource("6_11ls1")
 texture_pressed = ExtResource("7_0gmev")
 script = ExtResource("1_pirr3")
 
+[node name="NarracaoPlayer" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("11_11ls1")
+
+[connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/BotaoSom" to="ColorRect/MarginContainer/VBoxContainer/BotaoSom" method="reproduzir_narracao"]
 [connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer/PagAnteriorBotao" to="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer/PagAnteriorBotao" method="pagAnterior"]
 [connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer/ProxPagBotao" to="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer/ProxPagBotao" method="proxPag"]
