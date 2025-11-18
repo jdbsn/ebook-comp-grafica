@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://duklyssafdxm"]
+[gd_scene load_steps=16 format=3 uid="uid://duklyssafdxm"]
 
 [ext_resource type="Texture2D" uid="uid://46fm0nqpror2" path="res://assets/botoes/som-ligado.png" id="1_4lmlo"]
+[ext_resource type="Texture2D" uid="uid://te4otf14rf1r" path="res://assets/nuvens.png" id="1_11ls1"]
 [ext_resource type="Texture2D" uid="uid://clo43fp1hbk28" path="res://assets/pag3.png" id="1_ix1kx"]
 [ext_resource type="Script" uid="uid://8uqly684mmy8" path="res://scripts/botoes.gd" id="1_pirr3"]
 [ext_resource type="Texture2D" uid="uid://b7kwvxrrynar5" path="res://assets/botoes/ant.png" id="2_4lmlo"]
@@ -11,6 +12,188 @@
 [ext_resource type="Texture2D" uid="uid://y5y0okhxn2o4" path="res://assets/botoes/prox.png" id="6_11ls1"]
 [ext_resource type="Texture2D" uid="uid://br0w3x4rnlfr7" path="res://assets/botoes/prox-pressionado.png" id="7_0gmev"]
 [ext_resource type="AudioStream" uid="uid://cnmeabehkongw" path="res://assets/narracoes/pag3.ogg" id="11_11ls1"]
+
+[sub_resource type="Animation" id="Animation_0gmev"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect/Nuvem:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(115, 474)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect/Nuvem2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect/Nuvem3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(604, 525)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ColorRect/Nuvem4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(65, 481)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ColorRect/Nuvem5:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(623, 343)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ColorRect/Nuvem6:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(525, 389)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ColorRect/Nuvem7:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(460.734, 126.775)]
+}
+
+[sub_resource type="Animation" id="Animation_11ls1"]
+resource_name = "nuvens"
+length = 90.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect/Nuvem:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 90),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-154, 168), Vector2(920, 210)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect/Nuvem2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 45, 50, 90),
+"transitions": PackedFloat32Array(1, 0, 1, 1),
+"update": 0,
+"values": [Vector2(220, 272), Vector2(870, 280), Vector2(-100, 272), Vector2(220, 272)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect/Nuvem3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = false
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 40, 45, 90),
+"transitions": PackedFloat32Array(1, 0, 1, 1),
+"update": 0,
+"values": [Vector2(437, 517), Vector2(850, 525), Vector2(-80, 525), Vector2(437, 517)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ColorRect/Nuvem4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = false
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 60, 65, 90),
+"transitions": PackedFloat32Array(1, 0, 1, 1),
+"update": 0,
+"values": [Vector2(140, 550), Vector2(860, 550), Vector2(-90, 550), Vector2(140, 550)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ColorRect/Nuvem5:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = false
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 30, 35, 90),
+"transitions": PackedFloat32Array(1, 0, 1, 1),
+"update": 0,
+"values": [Vector2(623, 343), Vector2(870, 343), Vector2(-90, 343), Vector2(623, 343)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ColorRect/Nuvem6:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = false
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 30, 35, 90),
+"transitions": PackedFloat32Array(1, 0, 1, 1),
+"update": 0,
+"values": [Vector2(525, 389), Vector2(850, 389), Vector2(-80, 389), Vector2(525, 389)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ColorRect/Nuvem7:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 30, 35, 90),
+"transitions": PackedFloat32Array(1, 0, 1, 1),
+"update": 0,
+"values": [Vector2(460.734, 126.775), Vector2(910, 126.775), Vector2(-130, 126.775), Vector2(460.734, 126.775)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rf42u"]
+_data = {
+&"RESET": SubResource("Animation_0gmev"),
+&"nuvens": SubResource("Animation_11ls1")
+}
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -35,10 +218,65 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -696.0
+offset_top = -593.0
 grow_horizontal = 2
 grow_vertical = 0
 texture = ExtResource("1_ix1kx")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_rf42u")
+}
+autoplay = "nuvens"
+
+[node name="Nuvem" type="Sprite2D" parent="ColorRect"]
+position = Vector2(115, 474)
+scale = Vector2(1.96408, 1.61223)
+texture = ExtResource("1_11ls1")
+region_enabled = true
+region_rect = Rect2(23.8284, 175.951, 174.605, 115.364)
+
+[node name="Nuvem2" type="Sprite2D" parent="ColorRect"]
+scale = Vector2(1.5035, 0.938405)
+texture = ExtResource("1_11ls1")
+region_enabled = true
+region_rect = Rect2(44.095, 21.6128, 143.426, 138.749)
+
+[node name="Nuvem3" type="Sprite2D" parent="ColorRect"]
+position = Vector2(604, 525)
+scale = Vector2(1.13389, 0.722632)
+texture = ExtResource("1_11ls1")
+region_enabled = true
+region_rect = Rect2(204.669, 171.274, 155.897, 124.718)
+
+[node name="Nuvem4" type="Sprite2D" parent="ColorRect"]
+position = Vector2(65, 481)
+scale = Vector2(1.19889, 0.924513)
+texture = ExtResource("1_11ls1")
+region_enabled = true
+region_rect = Rect2(204.669, 171.274, 155.897, 124.718)
+
+[node name="Nuvem5" type="Sprite2D" parent="ColorRect"]
+position = Vector2(623, 343)
+scale = Vector2(1.32906, 0.901045)
+texture = ExtResource("1_11ls1")
+region_enabled = true
+region_rect = Rect2(370.603, 301.253, 154.609, 114.668)
+
+[node name="Nuvem6" type="Sprite2D" parent="ColorRect"]
+position = Vector2(525, 389)
+scale = Vector2(1.27251, 0.811883)
+texture = ExtResource("1_11ls1")
+region_enabled = true
+region_rect = Rect2(381.285, 39.9019, 131.418, 115.957)
+
+[node name="Nuvem7" type="Sprite2D" parent="ColorRect"]
+position = Vector2(460.734, 126.775)
+scale = Vector2(2.04986, 1.34305)
+texture = ExtResource("1_11ls1")
+region_enabled = true
+region_rect = Rect2(381.285, 39.9019, 131.418, 115.957)
 
 [node name="MarginContainer" type="MarginContainer" parent="ColorRect"]
 layout_mode = 1
@@ -68,36 +306,49 @@ script = ExtResource("4_7hdir")
 [node name="MarginContainer" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_constants/margin_top = 40
+theme_override_constants/margin_top = 20
 
-[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/normal_font_size = 28
+text = "Imigração e as Condições de Trabalho no Brasil"
+fit_content = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 24
-text = "Da metade do século XIX até o início do século XX, outros milhares de imigrantes vieram ao Brasil em busca de tra-balho e de melhores oportunidades de vida, mas encon-traram condições de trabalho quase servis nas fazendas de café e também nas cidades."
+text = "Milhares de imigrantes chegaram ao Brasil entre meados do século XIX e início do XX buscando oportunidades melhores, mas enfrentaram condições quase servis, sobretudo nas fazendas de café. Muitas famílias trabalhavam sem salário, recebendo só comida e moradia — uma condição mais res-tritiva que a de outros trabalhadores da época, os mantendo dependentes dos fazendeiros, com pouca autonomia."
 fit_content = true
 
-[node name="MarginContainer2" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
+[node name="Botoes" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 8
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 9
 
-[node name="TextureRect" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer2"]
+[node name="TextureRect" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer/Botoes"]
 layout_mode = 2
 texture = ExtResource("4_ix1kx")
 
-[node name="MarginContainer" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer2"]
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer/Botoes"]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer/Botoes/MarginContainer"]
 layout_mode = 2
 
-[node name="PagAnteriorBotao" type="TextureButton" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer"]
+[node name="PagAnteriorBotao" type="TextureButton" parent="ColorRect/MarginContainer/VBoxContainer/Botoes/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 6
@@ -105,7 +356,7 @@ texture_normal = ExtResource("2_4lmlo")
 texture_pressed = ExtResource("3_ix1kx")
 script = ExtResource("1_pirr3")
 
-[node name="Pag" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer"]
+[node name="Pag" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/Botoes/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
 theme_override_colors/font_outline_color = Color(0.858824, 0.521569, 0.298039, 1)
@@ -113,7 +364,7 @@ theme_override_constants/outline_size = 6
 theme_override_font_sizes/font_size = 32
 text = "3"
 
-[node name="ProxPagBotao" type="TextureButton" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer"]
+[node name="ProxPagBotao" type="TextureButton" parent="ColorRect/MarginContainer/VBoxContainer/Botoes/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 6
@@ -126,5 +377,5 @@ unique_name_in_owner = true
 stream = ExtResource("11_11ls1")
 
 [connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/BotaoSom" to="ColorRect/MarginContainer/VBoxContainer/BotaoSom" method="reproduzir_narracao"]
-[connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer/PagAnteriorBotao" to="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer/PagAnteriorBotao" method="pagAnterior"]
-[connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer/ProxPagBotao" to="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer/ProxPagBotao" method="proxPag"]
+[connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/Botoes/MarginContainer/HBoxContainer/PagAnteriorBotao" to="ColorRect/MarginContainer/VBoxContainer/Botoes/MarginContainer/HBoxContainer/PagAnteriorBotao" method="pagAnterior"]
+[connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/Botoes/MarginContainer/HBoxContainer/ProxPagBotao" to="ColorRect/MarginContainer/VBoxContainer/Botoes/MarginContainer/HBoxContainer/ProxPagBotao" method="proxPag"]
