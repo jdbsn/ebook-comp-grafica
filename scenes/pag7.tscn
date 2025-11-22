@@ -1,7 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://bd6dtvptrw3o3"]
+[gd_scene load_steps=13 format=3 uid="uid://bd6dtvptrw3o3"]
 
 [ext_resource type="Texture2D" uid="uid://b7kwvxrrynar5" path="res://assets/botoes/ant.png" id="1_0jscr"]
-[ext_resource type="Texture2D" uid="uid://b3dbu1few1lx8" path="res://assets/pag7.png" id="1_btp4b"]
+[ext_resource type="Texture2D" uid="uid://lvlghdbgbo2r" path="res://assets/pag7.png" id="1_btp4b"]
 [ext_resource type="Texture2D" uid="uid://46fm0nqpror2" path="res://assets/botoes/som-ligado.png" id="1_rhlxr"]
 [ext_resource type="Texture2D" uid="uid://bh4b8b8fmreo3" path="res://assets/botoes/ant-pressionado.png" id="2_hcooe"]
 [ext_resource type="Texture2D" uid="uid://dnqbwrtos4r5a" path="res://assets/botoes/som-desligado.png" id="2_s36pb"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://y5y0okhxn2o4" path="res://assets/botoes/prox.png" id="4_s36pb"]
 [ext_resource type="Script" uid="uid://dafkkh1vraftq" path="res://scripts/narracao.gd" id="4_vb7g3"]
 [ext_resource type="Texture2D" uid="uid://br0w3x4rnlfr7" path="res://assets/botoes/prox-pressionado.png" id="5_btp4b"]
+[ext_resource type="PackedScene" uid="uid://dpcqxpstlx022" path="res://scenes/briga_casal.tscn" id="5_qyi1d"]
 [ext_resource type="AudioStream" uid="uid://px7m78xnimp" path="res://assets/narracoes/pag7.ogg" id="11_qyi1d"]
 
 [node name="Control" type="Control"]
@@ -30,15 +31,18 @@ grow_vertical = 2
 color = Color(0.937255, 0.937255, 0.937255, 1)
 
 [node name="TextureRect" type="TextureRect" parent="ColorRect"]
+custom_minimum_size = Vector2(0, 574)
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 12
+anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 288.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 size_flags_vertical = 3
 texture = ExtResource("1_btp4b")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="MarginContainer" type="MarginContainer" parent="ColorRect"]
 layout_mode = 1
@@ -56,6 +60,7 @@ theme_override_constants/margin_bottom = 40
 layout_mode = 2
 
 [node name="BotaoSom" type="TextureButton" parent="ColorRect/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 8
 toggle_mode = true
@@ -82,28 +87,53 @@ fit_content = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2"]
 layout_mode = 2
-size_flags_vertical = 3
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 24
-text = "As mulheres, por sua vez, estão mais suscetíveis a diferentes formas de violência cometidas principalmente por homens, que comprometem sua segurança, liberdade e bem-estar."
+text = "As mulheres, por sua vez, estão mais suscetíveis a diferentes formas de violência cometidas principalmente por homens, que comprometem sua segurança, liberdade e bem-estar.
+
+Muitas não conseguem romper o ciclo da violência por não terem alternativas econômicas. Como recebem menos que os homens, tornam-se financeiramente dependentes de companheiros ou familiares.
+"
 fit_content = true
 
-[node name="MarginContainer2" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
+[node name="RichTextLabel3" type="RichTextLabel" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 24
+text = "Com os dois dedos, faça um gesto de pinça 
+para separar esse casal discutindo."
+fit_content = true
+horizontal_alignment = 1
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="ColorRect/MarginContainer/VBoxContainer/SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(690, 317)
+render_target_update_mode = 4
+
+[node name="BrigaCasal" parent="ColorRect/MarginContainer/VBoxContainer/SubViewportContainer/SubViewport" instance=ExtResource("5_qyi1d")]
+position = Vector2(39, 982)
+
+[node name="Botoes" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer2"]
+[node name="TextureRect" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer/Botoes"]
 layout_mode = 2
 texture = ExtResource("4_gcb3i")
 
-[node name="MarginContainer" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer2"]
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer/Botoes"]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer/Botoes/MarginContainer"]
 layout_mode = 2
 
-[node name="PagAnteriorBotao" type="TextureButton" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer"]
+[node name="PagAnteriorBotao" type="TextureButton" parent="ColorRect/MarginContainer/VBoxContainer/Botoes/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 6
@@ -111,7 +141,7 @@ texture_normal = ExtResource("1_0jscr")
 texture_pressed = ExtResource("2_hcooe")
 script = ExtResource("3_rhlxr")
 
-[node name="Pag" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer"]
+[node name="Pag" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/Botoes/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
 theme_override_colors/font_outline_color = Color(0.858824, 0.521569, 0.298039, 1)
@@ -119,7 +149,7 @@ theme_override_constants/outline_size = 6
 theme_override_font_sizes/font_size = 32
 text = "7"
 
-[node name="ProxPagBotao" type="TextureButton" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer"]
+[node name="ProxPagBotao" type="TextureButton" parent="ColorRect/MarginContainer/VBoxContainer/Botoes/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 6
@@ -132,5 +162,5 @@ unique_name_in_owner = true
 stream = ExtResource("11_qyi1d")
 
 [connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/BotaoSom" to="ColorRect/MarginContainer/VBoxContainer/BotaoSom" method="reproduzir_narracao"]
-[connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer/PagAnteriorBotao" to="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer/PagAnteriorBotao" method="pagAnterior"]
-[connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer/ProxPagBotao" to="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer/ProxPagBotao" method="proxPag"]
+[connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/Botoes/MarginContainer/HBoxContainer/PagAnteriorBotao" to="ColorRect/MarginContainer/VBoxContainer/Botoes/MarginContainer/HBoxContainer/PagAnteriorBotao" method="pagAnterior"]
+[connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/Botoes/MarginContainer/HBoxContainer/ProxPagBotao" to="ColorRect/MarginContainer/VBoxContainer/Botoes/MarginContainer/HBoxContainer/ProxPagBotao" method="proxPag"]
