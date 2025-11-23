@@ -1,13 +1,13 @@
 [gd_scene load_steps=9 format=3 uid="uid://bqgrmwyve3uqx"]
 
-[ext_resource type="Texture2D" uid="uid://y5y0okhxn2o4" path="res://assets/botoes/prox.png" id="1_1k6fu"]
-[ext_resource type="Texture2D" uid="uid://dnqbwrtos4r5a" path="res://assets/botoes/som-desligado.png" id="1_dyl1v"]
-[ext_resource type="Texture2D" uid="uid://46fm0nqpror2" path="res://assets/botoes/som-ligado.png" id="1_lurbu"]
-[ext_resource type="Texture2D" uid="uid://br0w3x4rnlfr7" path="res://assets/botoes/prox-pressionado.png" id="2_5jfhh"]
-[ext_resource type="Texture2D" uid="uid://csge83w5q2ngb" path="res://assets/1695035061448.png" id="2_lurbu"]
-[ext_resource type="Script" uid="uid://dafkkh1vraftq" path="res://scripts/narracao.gd" id="3_0gf8a"]
-[ext_resource type="Script" uid="uid://8uqly684mmy8" path="res://scripts/botoes.gd" id="4_wsrbi"]
-[ext_resource type="AudioStream" uid="uid://bnwgtiuwwtvxl" path="res://assets/narracoes/capa.ogg" id="8_0gf8a"]
+[ext_resource type="Texture2D" uid="uid://dnqbwrtos4r5a" path="res://assets/botoes/som-desligado.png" id="1_aljfo"]
+[ext_resource type="Texture2D" uid="uid://46fm0nqpror2" path="res://assets/botoes/som-ligado.png" id="2_0k0tx"]
+[ext_resource type="Script" uid="uid://dafkkh1vraftq" path="res://scripts/narracao.gd" id="3_bvwr6"]
+[ext_resource type="Texture2D" uid="uid://csge83w5q2ngb" path="res://assets/1695035061448.png" id="4_4ie7o"]
+[ext_resource type="Texture2D" uid="uid://y5y0okhxn2o4" path="res://assets/botoes/prox.png" id="5_boag4"]
+[ext_resource type="Texture2D" uid="uid://br0w3x4rnlfr7" path="res://assets/botoes/prox-pressionado.png" id="6_eg0vd"]
+[ext_resource type="Script" uid="uid://8uqly684mmy8" path="res://scripts/botoes.gd" id="7_7f4nk"]
+[ext_resource type="AudioStream" uid="uid://bnwgtiuwwtvxl" path="res://assets/narracoes/capa.ogg" id="8_bukyd"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -43,9 +43,9 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 8
 toggle_mode = true
-texture_normal = ExtResource("1_dyl1v")
-texture_pressed = ExtResource("1_lurbu")
-script = ExtResource("3_0gf8a")
+texture_normal = ExtResource("1_aljfo")
+texture_pressed = ExtResource("2_0k0tx")
+script = ExtResource("3_bvwr6")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="ColorRect/MarginContainer"]
 layout_mode = 2
@@ -77,14 +77,14 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture = ExtResource("2_lurbu")
+texture = ExtResource("4_4ie7o")
 
 [node name="MarginContainer" type="MarginContainer" parent="ColorRect/MarginContainer"]
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
-script = ExtResource("3_0gf8a")
+script = ExtResource("3_bvwr6")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer/MarginContainer"]
 layout_mode = 2
@@ -94,13 +94,13 @@ size_flags_vertical = 8
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 3
-texture_normal = ExtResource("1_1k6fu")
-texture_pressed = ExtResource("2_5jfhh")
-script = ExtResource("4_wsrbi")
+texture_normal = ExtResource("5_boag4")
+texture_pressed = ExtResource("6_eg0vd")
+script = ExtResource("7_7f4nk")
 
 [node name="NarracaoPlayer" type="AudioStreamPlayer2D" parent="."]
 unique_name_in_owner = true
-stream = ExtResource("8_0gf8a")
+stream = ExtResource("8_bukyd")
 
 [connection signal="pressed" from="ColorRect/MarginContainer/BotaoSom" to="ColorRect/MarginContainer/BotaoSom" method="reproduzir_narracao"]
 [connection signal="pressed" from="ColorRect/MarginContainer/MarginContainer/VBoxContainer/ProxPagBotao" to="ColorRect/MarginContainer/MarginContainer/VBoxContainer/ProxPagBotao" method="proxPag"]

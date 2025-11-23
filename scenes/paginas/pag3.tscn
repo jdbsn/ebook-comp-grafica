@@ -1,17 +1,18 @@
-[gd_scene load_steps=16 format=3 uid="uid://duklyssafdxm"]
+[gd_scene load_steps=17 format=3 uid="uid://duklyssafdxm"]
 
-[ext_resource type="Texture2D" uid="uid://46fm0nqpror2" path="res://assets/botoes/som-ligado.png" id="1_4lmlo"]
-[ext_resource type="Texture2D" uid="uid://te4otf14rf1r" path="res://assets/nuvens.png" id="1_11ls1"]
-[ext_resource type="Texture2D" uid="uid://clo43fp1hbk28" path="res://assets/pag3.png" id="1_ix1kx"]
-[ext_resource type="Script" uid="uid://8uqly684mmy8" path="res://scripts/botoes.gd" id="1_pirr3"]
-[ext_resource type="Texture2D" uid="uid://b7kwvxrrynar5" path="res://assets/botoes/ant.png" id="2_4lmlo"]
-[ext_resource type="Texture2D" uid="uid://dnqbwrtos4r5a" path="res://assets/botoes/som-desligado.png" id="2_ix1kx"]
-[ext_resource type="Texture2D" uid="uid://bh4b8b8fmreo3" path="res://assets/botoes/ant-pressionado.png" id="3_ix1kx"]
-[ext_resource type="Script" uid="uid://dafkkh1vraftq" path="res://scripts/narracao.gd" id="4_7hdir"]
-[ext_resource type="Texture2D" uid="uid://d2hlt346ua06k" path="res://assets/pag3-barra.png" id="4_ix1kx"]
-[ext_resource type="Texture2D" uid="uid://y5y0okhxn2o4" path="res://assets/botoes/prox.png" id="6_11ls1"]
-[ext_resource type="Texture2D" uid="uid://br0w3x4rnlfr7" path="res://assets/botoes/prox-pressionado.png" id="7_0gmev"]
-[ext_resource type="AudioStream" uid="uid://cnmeabehkongw" path="res://assets/narracoes/pag3.ogg" id="11_11ls1"]
+[ext_resource type="Texture2D" uid="uid://clo43fp1hbk28" path="res://assets/pag3.png" id="1_210o7"]
+[ext_resource type="Texture2D" uid="uid://te4otf14rf1r" path="res://assets/nuvens.png" id="2_s23ky"]
+[ext_resource type="Texture2D" uid="uid://dnqbwrtos4r5a" path="res://assets/botoes/som-desligado.png" id="3_71evm"]
+[ext_resource type="Texture2D" uid="uid://46fm0nqpror2" path="res://assets/botoes/som-ligado.png" id="4_p1vtf"]
+[ext_resource type="Script" uid="uid://dafkkh1vraftq" path="res://scripts/narracao.gd" id="5_qjvxv"]
+[ext_resource type="Texture2D" uid="uid://d2hlt346ua06k" path="res://assets/pag3-barra.png" id="6_l68xk"]
+[ext_resource type="Texture2D" uid="uid://b7kwvxrrynar5" path="res://assets/botoes/ant.png" id="7_4fxgf"]
+[ext_resource type="Texture2D" uid="uid://bh4b8b8fmreo3" path="res://assets/botoes/ant-pressionado.png" id="8_px3pf"]
+[ext_resource type="Script" uid="uid://8uqly684mmy8" path="res://scripts/botoes.gd" id="9_wvv3q"]
+[ext_resource type="Texture2D" uid="uid://y5y0okhxn2o4" path="res://assets/botoes/prox.png" id="10_c634f"]
+[ext_resource type="Texture2D" uid="uid://br0w3x4rnlfr7" path="res://assets/botoes/prox-pressionado.png" id="11_ug3p3"]
+[ext_resource type="PackedScene" uid="uid://dq3sahld88glh" path="res://scenes/platacao.tscn" id="12_s23ky"]
+[ext_resource type="AudioStream" uid="uid://cnmeabehkongw" path="res://assets/narracoes/pag3.ogg" id="12_sscpb"]
 
 [sub_resource type="Animation" id="Animation_0gmev"]
 length = 0.001
@@ -221,7 +222,7 @@ anchor_bottom = 1.0
 offset_top = -593.0
 grow_horizontal = 2
 grow_vertical = 0
-texture = ExtResource("1_ix1kx")
+texture = ExtResource("1_210o7")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect"]
 root_node = NodePath("../..")
@@ -233,48 +234,48 @@ autoplay = "nuvens"
 [node name="Nuvem" type="Sprite2D" parent="ColorRect"]
 position = Vector2(115, 474)
 scale = Vector2(1.96408, 1.61223)
-texture = ExtResource("1_11ls1")
+texture = ExtResource("2_s23ky")
 region_enabled = true
 region_rect = Rect2(23.8284, 175.951, 174.605, 115.364)
 
 [node name="Nuvem2" type="Sprite2D" parent="ColorRect"]
 scale = Vector2(1.5035, 0.938405)
-texture = ExtResource("1_11ls1")
+texture = ExtResource("2_s23ky")
 region_enabled = true
 region_rect = Rect2(44.095, 21.6128, 143.426, 138.749)
 
 [node name="Nuvem3" type="Sprite2D" parent="ColorRect"]
 position = Vector2(604, 525)
 scale = Vector2(1.13389, 0.722632)
-texture = ExtResource("1_11ls1")
+texture = ExtResource("2_s23ky")
 region_enabled = true
 region_rect = Rect2(204.669, 171.274, 155.897, 124.718)
 
 [node name="Nuvem4" type="Sprite2D" parent="ColorRect"]
 position = Vector2(65, 481)
 scale = Vector2(1.19889, 0.924513)
-texture = ExtResource("1_11ls1")
+texture = ExtResource("2_s23ky")
 region_enabled = true
 region_rect = Rect2(204.669, 171.274, 155.897, 124.718)
 
 [node name="Nuvem5" type="Sprite2D" parent="ColorRect"]
 position = Vector2(623, 343)
 scale = Vector2(1.32906, 0.901045)
-texture = ExtResource("1_11ls1")
+texture = ExtResource("2_s23ky")
 region_enabled = true
 region_rect = Rect2(370.603, 301.253, 154.609, 114.668)
 
 [node name="Nuvem6" type="Sprite2D" parent="ColorRect"]
 position = Vector2(525, 389)
 scale = Vector2(1.27251, 0.811883)
-texture = ExtResource("1_11ls1")
+texture = ExtResource("2_s23ky")
 region_enabled = true
 region_rect = Rect2(381.285, 39.9019, 131.418, 115.957)
 
 [node name="Nuvem7" type="Sprite2D" parent="ColorRect"]
 position = Vector2(460.734, 126.775)
 scale = Vector2(2.04986, 1.34305)
-texture = ExtResource("1_11ls1")
+texture = ExtResource("2_s23ky")
 region_enabled = true
 region_rect = Rect2(381.285, 39.9019, 131.418, 115.957)
 
@@ -300,9 +301,9 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 8
 toggle_mode = true
-texture_normal = ExtResource("2_ix1kx")
-texture_pressed = ExtResource("1_4lmlo")
-script = ExtResource("4_7hdir")
+texture_normal = ExtResource("3_71evm")
+texture_pressed = ExtResource("4_p1vtf")
+script = ExtResource("5_qjvxv")
 
 [node name="MarginContainer" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -329,6 +330,19 @@ theme_override_font_sizes/normal_font_size = 24
 text = "Milhares de imigrantes chegaram ao Brasil entre meados do século XIX e início do XX buscando oportunidades melhores, mas enfrentaram condições quase servis, sobretudo nas fazendas de café. Muitas famílias trabalhavam sem salário, recebendo só comida e moradia — uma condição mais res-tritiva que a de outros trabalhadores da época, os mantendo dependentes dos fazendeiros, com pouca autonomia."
 fit_content = true
 
+[node name="SubViewportContainer" type="SubViewportContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="ColorRect/MarginContainer/VBoxContainer/SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(708, 401)
+render_target_update_mode = 4
+
+[node name="Platacao" parent="ColorRect/MarginContainer/VBoxContainer/SubViewportContainer/SubViewport" instance=ExtResource("12_s23ky")]
+
 [node name="Botoes" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 8
@@ -338,7 +352,7 @@ theme_override_constants/margin_bottom = 9
 
 [node name="TextureRect" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer/Botoes"]
 layout_mode = 2
-texture = ExtResource("4_ix1kx")
+texture = ExtResource("6_l68xk")
 
 [node name="MarginContainer" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer/Botoes"]
 layout_mode = 2
@@ -353,9 +367,9 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 6
-texture_normal = ExtResource("2_4lmlo")
-texture_pressed = ExtResource("3_ix1kx")
-script = ExtResource("1_pirr3")
+texture_normal = ExtResource("7_4fxgf")
+texture_pressed = ExtResource("8_px3pf")
+script = ExtResource("9_wvv3q")
 
 [node name="Pag" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/Botoes/MarginContainer/HBoxContainer"]
 layout_mode = 2
@@ -369,13 +383,13 @@ text = "3"
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 6
-texture_normal = ExtResource("6_11ls1")
-texture_pressed = ExtResource("7_0gmev")
-script = ExtResource("1_pirr3")
+texture_normal = ExtResource("10_c634f")
+texture_pressed = ExtResource("11_ug3p3")
+script = ExtResource("9_wvv3q")
 
 [node name="NarracaoPlayer" type="AudioStreamPlayer2D" parent="."]
 unique_name_in_owner = true
-stream = ExtResource("11_11ls1")
+stream = ExtResource("12_sscpb")
 
 [connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/BotaoSom" to="ColorRect/MarginContainer/VBoxContainer/BotaoSom" method="reproduzir_narracao"]
 [connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/Botoes/MarginContainer/HBoxContainer/PagAnteriorBotao" to="ColorRect/MarginContainer/VBoxContainer/Botoes/MarginContainer/HBoxContainer/PagAnteriorBotao" method="pagAnterior"]

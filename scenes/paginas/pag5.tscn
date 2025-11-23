@@ -1,16 +1,16 @@
-[gd_scene load_steps=12 format=3 uid="uid://u05ow48ucu4m"]
+[gd_scene load_steps=12 format=3 uid="uid://b2nu8mc2q6ufm"]
 
-[ext_resource type="Texture2D" uid="uid://b7kwvxrrynar5" path="res://assets/botoes/ant.png" id="1_0nxt6"]
-[ext_resource type="Texture2D" uid="uid://46fm0nqpror2" path="res://assets/botoes/som-ligado.png" id="1_pmkkt"]
-[ext_resource type="Texture2D" uid="uid://dnqbwrtos4r5a" path="res://assets/botoes/som-desligado.png" id="2_erphp"]
-[ext_resource type="Texture2D" uid="uid://bh4b8b8fmreo3" path="res://assets/botoes/ant-pressionado.png" id="2_rq8jv"]
-[ext_resource type="Script" uid="uid://dafkkh1vraftq" path="res://scripts/narracao.gd" id="3_71vtu"]
-[ext_resource type="Texture2D" uid="uid://dpnt7s3r3seah" path="res://assets/barra.png" id="3_erphp"]
-[ext_resource type="Script" uid="uid://8uqly684mmy8" path="res://scripts/botoes.gd" id="3_pmkkt"]
-[ext_resource type="Texture2D" uid="uid://b6tpjgyhiraes" path="res://assets/pag6.png" id="3_qslgd"]
-[ext_resource type="Texture2D" uid="uid://y5y0okhxn2o4" path="res://assets/botoes/prox.png" id="4_erphp"]
-[ext_resource type="Texture2D" uid="uid://br0w3x4rnlfr7" path="res://assets/botoes/prox-pressionado.png" id="5_qslgd"]
-[ext_resource type="AudioStream" uid="uid://2ur52cc2er4e" path="res://assets/narracoes/pag6.ogg" id="11_p6yoh"]
+[ext_resource type="Texture2D" uid="uid://dnqbwrtos4r5a" path="res://assets/botoes/som-desligado.png" id="1_djgd2"]
+[ext_resource type="Texture2D" uid="uid://46fm0nqpror2" path="res://assets/botoes/som-ligado.png" id="2_u10ee"]
+[ext_resource type="Script" uid="uid://dafkkh1vraftq" path="res://scripts/narracao.gd" id="3_3uj6g"]
+[ext_resource type="PackedScene" uid="uid://sfr0roiiybx7" path="res://scenes/balanca.tscn" id="4_l0hph"]
+[ext_resource type="Texture2D" uid="uid://dpnt7s3r3seah" path="res://assets/barra.png" id="5_owsxi"]
+[ext_resource type="Texture2D" uid="uid://b7kwvxrrynar5" path="res://assets/botoes/ant.png" id="6_r3s4n"]
+[ext_resource type="Texture2D" uid="uid://bh4b8b8fmreo3" path="res://assets/botoes/ant-pressionado.png" id="7_2thmd"]
+[ext_resource type="Script" uid="uid://8uqly684mmy8" path="res://scripts/botoes.gd" id="8_hn26w"]
+[ext_resource type="Texture2D" uid="uid://y5y0okhxn2o4" path="res://assets/botoes/prox.png" id="9_o8lhe"]
+[ext_resource type="Texture2D" uid="uid://br0w3x4rnlfr7" path="res://assets/botoes/prox-pressionado.png" id="10_0n28m"]
+[ext_resource type="AudioStream" uid="uid://dssgf1edohu62" path="res://assets/narracoes/pag5.ogg" id="11_g21ae"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -49,13 +49,13 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 8
 toggle_mode = true
-texture_normal = ExtResource("2_erphp")
-texture_pressed = ExtResource("1_pmkkt")
-script = ExtResource("3_71vtu")
+texture_normal = ExtResource("1_djgd2")
+texture_pressed = ExtResource("2_u10ee")
+script = ExtResource("3_3uj6g")
 
 [node name="MarginContainer" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_constants/margin_top = 40
+theme_override_constants/margin_top = 20
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer"]
 layout_mode = 2
@@ -66,29 +66,51 @@ layout_mode = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 2
 theme_override_font_sizes/normal_font_size = 28
-text = "Desigualdades Raciais em Educação e Trabalho"
+text = "A balança desigual do Brasil"
 fit_content = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 0
 theme_override_font_sizes/normal_font_size = 24
-text = "No Brasil, a taxa de analfabetismo entre negros é mais que o dobro da de brancos, e tende a aumentar conforme se observa a idade do grupo."
+text = "As estatísticas sobre desigualdades sociais mostram que o Brasil é um dos países mais desiguais do mundo. Oportunidades e recursos estão sempre mais concentrados de um lado.
+
+Se colocássemos esses elementos em uma balança, ela ficaria completamente desequilibrada. Por mais esforços que sejam feitos, a balança oscila, mas o peso continua favorecendo os mais ricos."
 fit_content = true
 
-[node name="TextureRect" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer"]
+[node name="RichTextLabel3" type="RichTextLabel" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-texture = ExtResource("3_qslgd")
-stretch_mode = 5
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 0
+theme_override_font_sizes/normal_font_size = 24
+text = "Mova o celular para tentar nivelar a balança"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="ColorRect/MarginContainer/VBoxContainer/SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+physics_object_picking = true
+size = Vector2i(693, 351)
+render_target_update_mode = 4
+
+[node name="Balanca" parent="ColorRect/MarginContainer/VBoxContainer/SubViewportContainer/SubViewport" instance=ExtResource("4_l0hph")]
+position = Vector2(425.5, 1384)
 
 [node name="MarginContainer2" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer2"]
 layout_mode = 2
-texture = ExtResource("3_erphp")
+texture = ExtResource("5_owsxi")
 
 [node name="MarginContainer" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer2"]
 layout_mode = 2
@@ -102,9 +124,9 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 6
-texture_normal = ExtResource("1_0nxt6")
-texture_pressed = ExtResource("2_rq8jv")
-script = ExtResource("3_pmkkt")
+texture_normal = ExtResource("6_r3s4n")
+texture_pressed = ExtResource("7_2thmd")
+script = ExtResource("8_hn26w")
 
 [node name="Pag" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer"]
 layout_mode = 2
@@ -112,19 +134,19 @@ size_flags_horizontal = 6
 theme_override_colors/font_outline_color = Color(0.858824, 0.521569, 0.298039, 1)
 theme_override_constants/outline_size = 6
 theme_override_font_sizes/font_size = 32
-text = "6"
+text = "5"
 
 [node name="ProxPagBotao" type="TextureButton" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 6
-texture_normal = ExtResource("4_erphp")
-texture_pressed = ExtResource("5_qslgd")
-script = ExtResource("3_pmkkt")
+texture_normal = ExtResource("9_o8lhe")
+texture_pressed = ExtResource("10_0n28m")
+script = ExtResource("8_hn26w")
 
 [node name="NarracaoPlayer" type="AudioStreamPlayer2D" parent="."]
 unique_name_in_owner = true
-stream = ExtResource("11_p6yoh")
+stream = ExtResource("11_g21ae")
 
 [connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/BotaoSom" to="ColorRect/MarginContainer/VBoxContainer/BotaoSom" method="reproduzir_narracao"]
 [connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer/PagAnteriorBotao" to="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer/PagAnteriorBotao" method="pagAnterior"]

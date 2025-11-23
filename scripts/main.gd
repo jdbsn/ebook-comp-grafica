@@ -1,14 +1,14 @@
 extends Node
 
 var paginas = [
-	"res://scenes/capa.tscn",
-	"res://scenes/pag2.tscn",
-	"res://scenes/pag3.tscn",
-	"res://scenes/pag4.tscn",
-	"res://scenes/pag5.tscn",
-	"res://scenes/pag6.tscn",
-	"res://scenes/pag7.tscn",
-	"res://scenes/contracapa.tscn"
+	"res://scenes/paginas/capa.tscn",
+	"res://scenes/paginas/pag2.tscn",
+	"res://scenes/paginas/pag3.tscn",
+	"res://scenes/paginas/pag4.tscn",
+	"res://scenes/paginas/pag5.tscn",
+	"res://scenes/paginas/pag6.tscn",
+	"res://scenes/paginas/pag7.tscn",
+	"res://scenes/paginas/contracapa.tscn"
 ]
 var pagina_atual = 0
 
