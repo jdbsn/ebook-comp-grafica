@@ -1,16 +1,109 @@
-[gd_scene load_steps=12 format=3 uid="uid://cx2j4vp6js16c"]
+[gd_scene load_steps=26 format=3 uid="uid://cx2j4vp6js16c"]
 
 [ext_resource type="Texture2D" uid="uid://dnqbwrtos4r5a" path="res://assets/botoes/som-desligado.png" id="1_yhiga"]
 [ext_resource type="Texture2D" uid="uid://46fm0nqpror2" path="res://assets/botoes/som-ligado.png" id="2_j65vy"]
 [ext_resource type="Script" uid="uid://dafkkh1vraftq" path="res://scripts/narracao.gd" id="3_ux24k"]
-[ext_resource type="Texture2D" uid="uid://40j21oqbxrrb" path="res://assets/pag2.png" id="4_yta74"]
+[ext_resource type="Texture2D" uid="uid://2o7cveaou7np" path="res://assets/mapa.png" id="4_j65vy"]
 [ext_resource type="Texture2D" uid="uid://dpnt7s3r3seah" path="res://assets/barra.png" id="5_avdt2"]
 [ext_resource type="Texture2D" uid="uid://b7kwvxrrynar5" path="res://assets/botoes/ant.png" id="6_oy64q"]
 [ext_resource type="Texture2D" uid="uid://bh4b8b8fmreo3" path="res://assets/botoes/ant-pressionado.png" id="7_l1muw"]
 [ext_resource type="Script" uid="uid://8uqly684mmy8" path="res://scripts/botoes.gd" id="8_1bc3m"]
 [ext_resource type="Texture2D" uid="uid://y5y0okhxn2o4" path="res://assets/botoes/prox.png" id="9_syj0m"]
 [ext_resource type="Texture2D" uid="uid://br0w3x4rnlfr7" path="res://assets/botoes/prox-pressionado.png" id="10_ienfq"]
+[ext_resource type="Texture2D" uid="uid://ck3o2rmkdntsy" path="res://assets/ondas.png" id="11_j65vy"]
 [ext_resource type="AudioStream" uid="uid://cdvqj416gntat" path="res://assets/narracoes/pag2.ogg" id="11_m14x5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j65vy"]
+atlas = ExtResource("11_j65vy")
+region = Rect2(4, 0, 159, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ux24k"]
+atlas = ExtResource("11_j65vy")
+region = Rect2(163, 0, 159, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yta74"]
+atlas = ExtResource("11_j65vy")
+region = Rect2(322, 0, 159, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_avdt2"]
+atlas = ExtResource("11_j65vy")
+region = Rect2(481, 0, 159, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oy64q"]
+atlas = ExtResource("11_j65vy")
+region = Rect2(4, 90, 159, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l1muw"]
+atlas = ExtResource("11_j65vy")
+region = Rect2(163, 90, 159, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1bc3m"]
+atlas = ExtResource("11_j65vy")
+region = Rect2(322, 90, 159, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_syj0m"]
+atlas = ExtResource("11_j65vy")
+region = Rect2(481, 90, 159, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ienfq"]
+atlas = ExtResource("11_j65vy")
+region = Rect2(4, 180, 159, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m14x5"]
+atlas = ExtResource("11_j65vy")
+region = Rect2(163, 180, 159, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8cfm6"]
+atlas = ExtResource("11_j65vy")
+region = Rect2(322, 180, 159, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p5jrd"]
+atlas = ExtResource("11_j65vy")
+region = Rect2(481, 180, 159, 90)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hq73c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j65vy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ux24k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yta74")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_avdt2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oy64q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l1muw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1bc3m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_syj0m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ienfq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m14x5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8cfm6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p5jrd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -75,14 +168,25 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 24
-text = "Desde a chegada dos portugueses ao continente americano no século XVI, as desigualdades sociais se instalaram, desenvolveram-se e aqui ficaram."
+text = "Desde a chegada dos portugueses ao continente americano no século XVI, as desigualdades sociais se instalaram, desenvolveram-se e aqui ficaram.
+
+Os povos nativos foram vistos pelos europeus como seres inferiores. Essa visão serviu de justificativa para a escravização dos indígenas e para a violência usada na conquista territorial.
+"
 fit_content = true
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="ColorRect/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 24
+text = "Arraste a caravela em direção ao Brasil."
+fit_content = true
+horizontal_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 6
-texture = ExtResource("4_yta74")
+texture = ExtResource("4_j65vy")
 stretch_mode = 5
 
 [node name="MarginContainer2" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer2"]
@@ -124,6 +228,34 @@ size_flags_vertical = 6
 texture_normal = ExtResource("9_syj0m")
 texture_pressed = ExtResource("10_ienfq")
 script = ExtResource("8_1bc3m")
+
+[node name="Onda" type="AnimatedSprite2D" parent="ColorRect"]
+position = Vector2(229, 708)
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_hq73c")
+autoplay = "default"
+frame_progress = 0.980429
+
+[node name="Onda2" type="AnimatedSprite2D" parent="ColorRect"]
+position = Vector2(461, 715)
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_hq73c")
+autoplay = "default"
+frame_progress = 0.872779
+
+[node name="Onda3" type="AnimatedSprite2D" parent="ColorRect"]
+position = Vector2(542, 911)
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_hq73c")
+autoplay = "default"
+frame_progress = 0.407859
+
+[node name="Onda4" type="AnimatedSprite2D" parent="ColorRect"]
+position = Vector2(330, 879)
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_hq73c")
+autoplay = "default"
+frame_progress = 0.0230891
 
 [node name="NarracaoPlayer" type="AudioStreamPlayer2D" parent="."]
 unique_name_in_owner = true

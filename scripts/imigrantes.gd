@@ -14,7 +14,7 @@ func _ready():
 	comida.visible = false
 	dinheiro.visible = false
 
-func _input_event(viewport, event, shape_idx):
+func _input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton and event.pressed:
 		if qtd_toques == toques_necessarios:
 			mostrar_efeitos()

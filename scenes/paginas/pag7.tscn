@@ -112,7 +112,7 @@ stretch = true
 [node name="SubViewport" type="SubViewport" parent="ColorRect/MarginContainer/VBoxContainer/SubViewportContainer"]
 transparent_bg = true
 handle_input_locally = false
-size = Vector2i(690, 317)
+size = Vector2i(2, 2)
 render_target_update_mode = 4
 
 [node name="BrigaCasal" parent="ColorRect/MarginContainer/VBoxContainer/SubViewportContainer/SubViewport" instance=ExtResource("5_igrgv")]

@@ -1,10 +1,11 @@
-[gd_scene load_steps=17 format=3 uid="uid://duklyssafdxm"]
+[gd_scene load_steps=18 format=3 uid="uid://duklyssafdxm"]
 
 [ext_resource type="Texture2D" uid="uid://clo43fp1hbk28" path="res://assets/pag3.png" id="1_210o7"]
 [ext_resource type="Texture2D" uid="uid://te4otf14rf1r" path="res://assets/nuvens.png" id="2_s23ky"]
 [ext_resource type="Texture2D" uid="uid://dnqbwrtos4r5a" path="res://assets/botoes/som-desligado.png" id="3_71evm"]
 [ext_resource type="Texture2D" uid="uid://46fm0nqpror2" path="res://assets/botoes/som-ligado.png" id="4_p1vtf"]
 [ext_resource type="Script" uid="uid://dafkkh1vraftq" path="res://scripts/narracao.gd" id="5_qjvxv"]
+[ext_resource type="Script" uid="uid://bl5b48jxieg4n" path="res://scripts/sub_viewport_container.gd" id="6_71evm"]
 [ext_resource type="Texture2D" uid="uid://d2hlt346ua06k" path="res://assets/pag3-barra.png" id="6_l68xk"]
 [ext_resource type="Texture2D" uid="uid://b7kwvxrrynar5" path="res://assets/botoes/ant.png" id="7_4fxgf"]
 [ext_resource type="Texture2D" uid="uid://bh4b8b8fmreo3" path="res://assets/botoes/ant-pressionado.png" id="8_px3pf"]
@@ -19,7 +20,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect/Nuvem:position")
+tracks/0/path = NodePath("ColorRect/Nuvens/Nuvem:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -31,7 +32,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("ColorRect/Nuvem2:position")
+tracks/1/path = NodePath("ColorRect/Nuvens/Nuvem2:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -43,7 +44,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("ColorRect/Nuvem3:position")
+tracks/2/path = NodePath("ColorRect/Nuvens/Nuvem3:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -55,7 +56,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("ColorRect/Nuvem4:position")
+tracks/3/path = NodePath("ColorRect/Nuvens/Nuvem4:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -67,7 +68,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("ColorRect/Nuvem5:position")
+tracks/4/path = NodePath("ColorRect/Nuvens/Nuvem5:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -79,7 +80,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("ColorRect/Nuvem6:position")
+tracks/5/path = NodePath("ColorRect/Nuvens/Nuvem6:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -91,7 +92,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("ColorRect/Nuvem7:position")
+tracks/6/path = NodePath("ColorRect/Nuvens/Nuvem7:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -108,7 +109,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect/Nuvem:position")
+tracks/0/path = NodePath("ColorRect/Nuvens/Nuvem:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = false
 tracks/0/keys = {
@@ -120,7 +121,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("ColorRect/Nuvem2:position")
+tracks/1/path = NodePath("ColorRect/Nuvens/Nuvem2:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = false
 tracks/1/keys = {
@@ -132,7 +133,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("ColorRect/Nuvem3:position")
+tracks/2/path = NodePath("ColorRect/Nuvens/Nuvem3:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = false
 tracks/2/keys = {
@@ -144,7 +145,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("ColorRect/Nuvem4:position")
+tracks/3/path = NodePath("ColorRect/Nuvens/Nuvem4:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = false
 tracks/3/keys = {
@@ -156,7 +157,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("ColorRect/Nuvem5:position")
+tracks/4/path = NodePath("ColorRect/Nuvens/Nuvem5:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = false
 tracks/4/keys = {
@@ -168,7 +169,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("ColorRect/Nuvem6:position")
+tracks/5/path = NodePath("ColorRect/Nuvens/Nuvem6:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = false
 tracks/5/keys = {
@@ -180,7 +181,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("ColorRect/Nuvem7:position")
+tracks/6/path = NodePath("ColorRect/Nuvens/Nuvem7:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -213,6 +214,66 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.937255, 0.937255, 0.937255, 1)
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_rf42u")
+}
+autoplay = "nuvens"
+
+[node name="Nuvens" type="MarginContainer" parent="ColorRect"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Nuvem" type="Sprite2D" parent="ColorRect/Nuvens"]
+position = Vector2(115, 474)
+scale = Vector2(1.96408, 1.61223)
+texture = ExtResource("2_s23ky")
+region_enabled = true
+region_rect = Rect2(23.8284, 175.951, 174.605, 115.364)
+
+[node name="Nuvem2" type="Sprite2D" parent="ColorRect/Nuvens"]
+scale = Vector2(1.5035, 0.938405)
+texture = ExtResource("2_s23ky")
+region_enabled = true
+region_rect = Rect2(44.095, 21.6128, 143.426, 138.749)
+
+[node name="Nuvem3" type="Sprite2D" parent="ColorRect/Nuvens"]
+position = Vector2(604, 525)
+scale = Vector2(1.13389, 0.722632)
+texture = ExtResource("2_s23ky")
+region_enabled = true
+region_rect = Rect2(204.669, 171.274, 155.897, 124.718)
+
+[node name="Nuvem4" type="Sprite2D" parent="ColorRect/Nuvens"]
+position = Vector2(65, 481)
+scale = Vector2(1.19889, 0.924513)
+texture = ExtResource("2_s23ky")
+region_enabled = true
+region_rect = Rect2(204.669, 171.274, 155.897, 124.718)
+
+[node name="Nuvem5" type="Sprite2D" parent="ColorRect/Nuvens"]
+position = Vector2(623, 343)
+scale = Vector2(1.32906, 0.901045)
+texture = ExtResource("2_s23ky")
+region_enabled = true
+region_rect = Rect2(370.603, 301.253, 154.609, 114.668)
+
+[node name="Nuvem6" type="Sprite2D" parent="ColorRect/Nuvens"]
+position = Vector2(525, 389)
+scale = Vector2(1.27251, 0.811883)
+texture = ExtResource("2_s23ky")
+region_enabled = true
+region_rect = Rect2(381.285, 39.9019, 131.418, 115.957)
+
+[node name="Nuvem7" type="Sprite2D" parent="ColorRect/Nuvens"]
+position = Vector2(460.734, 126.775)
+scale = Vector2(2.04986, 1.34305)
+texture = ExtResource("2_s23ky")
+region_enabled = true
+region_rect = Rect2(381.285, 39.9019, 131.418, 115.957)
+
 [node name="TextureRect" type="TextureRect" parent="ColorRect"]
 layout_mode = 1
 anchors_preset = 12
@@ -223,61 +284,6 @@ offset_top = -593.0
 grow_horizontal = 2
 grow_vertical = 0
 texture = ExtResource("1_210o7")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect"]
-root_node = NodePath("../..")
-libraries = {
-&"": SubResource("AnimationLibrary_rf42u")
-}
-autoplay = "nuvens"
-
-[node name="Nuvem" type="Sprite2D" parent="ColorRect"]
-position = Vector2(115, 474)
-scale = Vector2(1.96408, 1.61223)
-texture = ExtResource("2_s23ky")
-region_enabled = true
-region_rect = Rect2(23.8284, 175.951, 174.605, 115.364)
-
-[node name="Nuvem2" type="Sprite2D" parent="ColorRect"]
-scale = Vector2(1.5035, 0.938405)
-texture = ExtResource("2_s23ky")
-region_enabled = true
-region_rect = Rect2(44.095, 21.6128, 143.426, 138.749)
-
-[node name="Nuvem3" type="Sprite2D" parent="ColorRect"]
-position = Vector2(604, 525)
-scale = Vector2(1.13389, 0.722632)
-texture = ExtResource("2_s23ky")
-region_enabled = true
-region_rect = Rect2(204.669, 171.274, 155.897, 124.718)
-
-[node name="Nuvem4" type="Sprite2D" parent="ColorRect"]
-position = Vector2(65, 481)
-scale = Vector2(1.19889, 0.924513)
-texture = ExtResource("2_s23ky")
-region_enabled = true
-region_rect = Rect2(204.669, 171.274, 155.897, 124.718)
-
-[node name="Nuvem5" type="Sprite2D" parent="ColorRect"]
-position = Vector2(623, 343)
-scale = Vector2(1.32906, 0.901045)
-texture = ExtResource("2_s23ky")
-region_enabled = true
-region_rect = Rect2(370.603, 301.253, 154.609, 114.668)
-
-[node name="Nuvem6" type="Sprite2D" parent="ColorRect"]
-position = Vector2(525, 389)
-scale = Vector2(1.27251, 0.811883)
-texture = ExtResource("2_s23ky")
-region_enabled = true
-region_rect = Rect2(381.285, 39.9019, 131.418, 115.957)
-
-[node name="Nuvem7" type="Sprite2D" parent="ColorRect"]
-position = Vector2(460.734, 126.775)
-scale = Vector2(2.04986, 1.34305)
-texture = ExtResource("2_s23ky")
-region_enabled = true
-region_rect = Rect2(381.285, 39.9019, 131.418, 115.957)
 
 [node name="MarginContainer" type="MarginContainer" parent="ColorRect"]
 layout_mode = 1
@@ -334,11 +340,13 @@ fit_content = true
 layout_mode = 2
 size_flags_vertical = 3
 stretch = true
+script = ExtResource("6_71evm")
 
 [node name="SubViewport" type="SubViewport" parent="ColorRect/MarginContainer/VBoxContainer/SubViewportContainer"]
 transparent_bg = true
 handle_input_locally = false
-size = Vector2i(708, 401)
+physics_object_picking = true
+size = Vector2i(2, 2)
 render_target_update_mode = 4
 
 [node name="Platacao" parent="ColorRect/MarginContainer/VBoxContainer/SubViewportContainer/SubViewport" instance=ExtResource("12_s23ky")]
