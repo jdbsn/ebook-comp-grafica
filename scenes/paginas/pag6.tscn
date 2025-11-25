@@ -83,22 +83,22 @@ size_flags_vertical = 3
 texture = ExtResource("4_4mi7q")
 stretch_mode = 5
 
-[node name="MarginContainer2" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
+[node name="Botoes" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer2"]
+[node name="TextureRect" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer/Botoes"]
 layout_mode = 2
 texture = ExtResource("5_bgfye")
 
-[node name="MarginContainer" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer2"]
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer/Botoes"]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer/Botoes/MarginContainer"]
 layout_mode = 2
 
-[node name="PagAnteriorBotao" type="TextureButton" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer"]
+[node name="PagAnteriorBotao" type="TextureButton" parent="ColorRect/MarginContainer/VBoxContainer/Botoes/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 6
@@ -106,7 +106,7 @@ texture_normal = ExtResource("6_b7ui6")
 texture_pressed = ExtResource("7_gubnx")
 script = ExtResource("8_oir22")
 
-[node name="Pag" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer"]
+[node name="Pag" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/Botoes/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
 theme_override_colors/font_outline_color = Color(0.858824, 0.521569, 0.298039, 1)
@@ -114,7 +114,7 @@ theme_override_constants/outline_size = 6
 theme_override_font_sizes/font_size = 32
 text = "6"
 
-[node name="ProxPagBotao" type="TextureButton" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer"]
+[node name="ProxPagBotao" type="TextureButton" parent="ColorRect/MarginContainer/VBoxContainer/Botoes/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 6
@@ -127,5 +127,5 @@ unique_name_in_owner = true
 stream = ExtResource("11_vnt51")
 
 [connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/BotaoSom" to="ColorRect/MarginContainer/VBoxContainer/BotaoSom" method="reproduzir_narracao"]
-[connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer/PagAnteriorBotao" to="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer/PagAnteriorBotao" method="pagAnterior"]
-[connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer/ProxPagBotao" to="ColorRect/MarginContainer/VBoxContainer/MarginContainer2/MarginContainer/HBoxContainer/ProxPagBotao" method="proxPag"]
+[connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/Botoes/MarginContainer/HBoxContainer/PagAnteriorBotao" to="ColorRect/MarginContainer/VBoxContainer/Botoes/MarginContainer/HBoxContainer/PagAnteriorBotao" method="pagAnterior"]
+[connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/Botoes/MarginContainer/HBoxContainer/ProxPagBotao" to="ColorRect/MarginContainer/VBoxContainer/Botoes/MarginContainer/HBoxContainer/ProxPagBotao" method="proxPag"]

@@ -1,109 +1,17 @@
-[gd_scene load_steps=26 format=3 uid="uid://cx2j4vp6js16c"]
+[gd_scene load_steps=13 format=3 uid="uid://cx2j4vp6js16c"]
 
 [ext_resource type="Texture2D" uid="uid://dnqbwrtos4r5a" path="res://assets/botoes/som-desligado.png" id="1_yhiga"]
 [ext_resource type="Texture2D" uid="uid://46fm0nqpror2" path="res://assets/botoes/som-ligado.png" id="2_j65vy"]
 [ext_resource type="Script" uid="uid://dafkkh1vraftq" path="res://scripts/narracao.gd" id="3_ux24k"]
-[ext_resource type="Texture2D" uid="uid://2o7cveaou7np" path="res://assets/mapa.png" id="4_j65vy"]
+[ext_resource type="Script" uid="uid://bl5b48jxieg4n" path="res://scripts/sub_viewport_container.gd" id="4_j65vy"]
+[ext_resource type="PackedScene" uid="uid://drpmy0rjcy7we" path="res://scenes/mapa.tscn" id="4_yhiga"]
 [ext_resource type="Texture2D" uid="uid://dpnt7s3r3seah" path="res://assets/barra.png" id="5_avdt2"]
 [ext_resource type="Texture2D" uid="uid://b7kwvxrrynar5" path="res://assets/botoes/ant.png" id="6_oy64q"]
 [ext_resource type="Texture2D" uid="uid://bh4b8b8fmreo3" path="res://assets/botoes/ant-pressionado.png" id="7_l1muw"]
 [ext_resource type="Script" uid="uid://8uqly684mmy8" path="res://scripts/botoes.gd" id="8_1bc3m"]
 [ext_resource type="Texture2D" uid="uid://y5y0okhxn2o4" path="res://assets/botoes/prox.png" id="9_syj0m"]
 [ext_resource type="Texture2D" uid="uid://br0w3x4rnlfr7" path="res://assets/botoes/prox-pressionado.png" id="10_ienfq"]
-[ext_resource type="Texture2D" uid="uid://ck3o2rmkdntsy" path="res://assets/ondas.png" id="11_j65vy"]
 [ext_resource type="AudioStream" uid="uid://cdvqj416gntat" path="res://assets/narracoes/pag2.ogg" id="11_m14x5"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_j65vy"]
-atlas = ExtResource("11_j65vy")
-region = Rect2(4, 0, 159, 90)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ux24k"]
-atlas = ExtResource("11_j65vy")
-region = Rect2(163, 0, 159, 90)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yta74"]
-atlas = ExtResource("11_j65vy")
-region = Rect2(322, 0, 159, 90)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_avdt2"]
-atlas = ExtResource("11_j65vy")
-region = Rect2(481, 0, 159, 90)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_oy64q"]
-atlas = ExtResource("11_j65vy")
-region = Rect2(4, 90, 159, 90)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_l1muw"]
-atlas = ExtResource("11_j65vy")
-region = Rect2(163, 90, 159, 90)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1bc3m"]
-atlas = ExtResource("11_j65vy")
-region = Rect2(322, 90, 159, 90)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_syj0m"]
-atlas = ExtResource("11_j65vy")
-region = Rect2(481, 90, 159, 90)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ienfq"]
-atlas = ExtResource("11_j65vy")
-region = Rect2(4, 180, 159, 90)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_m14x5"]
-atlas = ExtResource("11_j65vy")
-region = Rect2(163, 180, 159, 90)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8cfm6"]
-atlas = ExtResource("11_j65vy")
-region = Rect2(322, 180, 159, 90)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_p5jrd"]
-atlas = ExtResource("11_j65vy")
-region = Rect2(481, 180, 159, 90)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_hq73c"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_j65vy")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ux24k")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yta74")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_avdt2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_oy64q")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_l1muw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1bc3m")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_syj0m")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ienfq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_m14x5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8cfm6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_p5jrd")
-}],
-"loop": true,
-"name": &"default",
-"speed": 4.0
-}]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -183,29 +91,39 @@ text = "Arraste a caravela em direção ao Brasil."
 fit_content = true
 horizontal_alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer2"]
+[node name="SubViewportContainer2" type="SubViewportContainer" parent="ColorRect/MarginContainer/VBoxContainer2"]
 layout_mode = 2
-size_flags_horizontal = 4
-texture = ExtResource("4_j65vy")
-stretch_mode = 5
+size_flags_vertical = 3
+stretch = true
+script = ExtResource("4_j65vy")
 
-[node name="MarginContainer2" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer2"]
+[node name="SubViewport" type="SubViewport" parent="ColorRect/MarginContainer/VBoxContainer2/SubViewportContainer2"]
+transparent_bg = true
+handle_input_locally = false
+physics_object_picking = true
+size = Vector2i(693, 365)
+render_target_update_mode = 4
+
+[node name="Mapa" parent="ColorRect/MarginContainer/VBoxContainer2/SubViewportContainer2/SubViewport" instance=ExtResource("4_yhiga")]
+position = Vector2(37.5, 545)
+
+[node name="Botoes" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer2"]
 layout_mode = 2
 size_flags_vertical = 8
 
-[node name="TextureRect" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer2/MarginContainer2"]
+[node name="TextureRect" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer2/Botoes"]
 layout_mode = 2
 texture = ExtResource("5_avdt2")
 
-[node name="MarginContainer" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer2/MarginContainer2"]
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer2/Botoes"]
 layout_mode = 2
 theme_override_constants/margin_left = 11
 theme_override_constants/margin_right = 11
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer2/MarginContainer2/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer2/Botoes/MarginContainer"]
 layout_mode = 2
 
-[node name="PagAnteriorBotao" type="TextureButton" parent="ColorRect/MarginContainer/VBoxContainer2/MarginContainer2/MarginContainer/HBoxContainer"]
+[node name="PagAnteriorBotao" type="TextureButton" parent="ColorRect/MarginContainer/VBoxContainer2/Botoes/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 6
@@ -213,7 +131,7 @@ texture_normal = ExtResource("6_oy64q")
 texture_pressed = ExtResource("7_l1muw")
 script = ExtResource("8_1bc3m")
 
-[node name="Pag" type="Label" parent="ColorRect/MarginContainer/VBoxContainer2/MarginContainer2/MarginContainer/HBoxContainer"]
+[node name="Pag" type="Label" parent="ColorRect/MarginContainer/VBoxContainer2/Botoes/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
 theme_override_colors/font_outline_color = Color(0.858824, 0.521569, 0.298039, 1)
@@ -221,7 +139,7 @@ theme_override_constants/outline_size = 6
 theme_override_font_sizes/font_size = 32
 text = "2"
 
-[node name="ProxPagBotao" type="TextureButton" parent="ColorRect/MarginContainer/VBoxContainer2/MarginContainer2/MarginContainer/HBoxContainer"]
+[node name="ProxPagBotao" type="TextureButton" parent="ColorRect/MarginContainer/VBoxContainer2/Botoes/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 6
@@ -229,38 +147,10 @@ texture_normal = ExtResource("9_syj0m")
 texture_pressed = ExtResource("10_ienfq")
 script = ExtResource("8_1bc3m")
 
-[node name="Onda" type="AnimatedSprite2D" parent="ColorRect"]
-position = Vector2(229, 708)
-scale = Vector2(0.4, 0.4)
-sprite_frames = SubResource("SpriteFrames_hq73c")
-autoplay = "default"
-frame_progress = 0.980429
-
-[node name="Onda2" type="AnimatedSprite2D" parent="ColorRect"]
-position = Vector2(461, 715)
-scale = Vector2(0.4, 0.4)
-sprite_frames = SubResource("SpriteFrames_hq73c")
-autoplay = "default"
-frame_progress = 0.872779
-
-[node name="Onda3" type="AnimatedSprite2D" parent="ColorRect"]
-position = Vector2(542, 911)
-scale = Vector2(0.4, 0.4)
-sprite_frames = SubResource("SpriteFrames_hq73c")
-autoplay = "default"
-frame_progress = 0.407859
-
-[node name="Onda4" type="AnimatedSprite2D" parent="ColorRect"]
-position = Vector2(330, 879)
-scale = Vector2(0.4, 0.4)
-sprite_frames = SubResource("SpriteFrames_hq73c")
-autoplay = "default"
-frame_progress = 0.0230891
-
 [node name="NarracaoPlayer" type="AudioStreamPlayer2D" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("11_m14x5")
 
 [connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer2/BotaoSom" to="ColorRect/MarginContainer/VBoxContainer2/BotaoSom" method="reproduzir_narracao"]
-[connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer2/MarginContainer2/MarginContainer/HBoxContainer/PagAnteriorBotao" to="ColorRect/MarginContainer/VBoxContainer2/MarginContainer2/MarginContainer/HBoxContainer/PagAnteriorBotao" method="pagAnterior"]
-[connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer2/MarginContainer2/MarginContainer/HBoxContainer/ProxPagBotao" to="ColorRect/MarginContainer/VBoxContainer2/MarginContainer2/MarginContainer/HBoxContainer/ProxPagBotao" method="proxPag"]
+[connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer2/Botoes/MarginContainer/HBoxContainer/PagAnteriorBotao" to="ColorRect/MarginContainer/VBoxContainer2/Botoes/MarginContainer/HBoxContainer/PagAnteriorBotao" method="pagAnterior"]
+[connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer2/Botoes/MarginContainer/HBoxContainer/ProxPagBotao" to="ColorRect/MarginContainer/VBoxContainer2/Botoes/MarginContainer/HBoxContainer/ProxPagBotao" method="proxPag"]
