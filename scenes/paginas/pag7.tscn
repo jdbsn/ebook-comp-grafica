@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://bd6dtvptrw3o3"]
 
-[ext_resource type="Texture2D" uid="uid://lvlghdbgbo2r" path="res://assets/pag7.png" id="1_en32k"]
+[ext_resource type="Texture2D" uid="uid://lvlghdbgbo2r" path="res://assets/paginas/briga/pag7.png" id="1_en32k"]
 [ext_resource type="Texture2D" uid="uid://dnqbwrtos4r5a" path="res://assets/botoes/som-desligado.png" id="2_bk2qf"]
 [ext_resource type="Texture2D" uid="uid://46fm0nqpror2" path="res://assets/botoes/som-ligado.png" id="3_ieee8"]
 [ext_resource type="Script" uid="uid://dafkkh1vraftq" path="res://scripts/narracao.gd" id="4_n5td5"]

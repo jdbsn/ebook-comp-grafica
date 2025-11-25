@@ -1,11 +1,11 @@
 [gd_scene load_steps=12 format=3 uid="uid://dpcqxpstlx022"]
 
-[ext_resource type="Texture2D" uid="uid://c8h7qqs6q7n7j" path="res://assets/homem (1).png" id="1_b0y7k"]
+[ext_resource type="Texture2D" uid="uid://c8h7qqs6q7n7j" path="res://assets/paginas/briga/homem (1).png" id="1_b0y7k"]
 [ext_resource type="Script" uid="uid://o4bf25bqgg5w" path="res://scripts/briga_casal.gd" id="1_bjc1s"]
-[ext_resource type="Texture2D" uid="uid://cpiuqfe637puk" path="res://assets/mulher.png" id="2_bjc1s"]
-[ext_resource type="Texture2D" uid="uid://cj8khyn4mdiwb" path="res://assets/balao.png" id="4_et3ik"]
-[ext_resource type="Texture2D" uid="uid://c56lltbcjmkcv" path="res://assets/bebe_chorando.png" id="5_sqr6q"]
-[ext_resource type="Texture2D" uid="uid://h28u637033ma" path="res://assets/lagrima.png" id="6_t6bxc"]
+[ext_resource type="Texture2D" uid="uid://cpiuqfe637puk" path="res://assets/paginas/briga/mulher.png" id="2_bjc1s"]
+[ext_resource type="Texture2D" uid="uid://cj8khyn4mdiwb" path="res://assets/paginas/briga/balao.png" id="4_et3ik"]
+[ext_resource type="Texture2D" uid="uid://c56lltbcjmkcv" path="res://assets/paginas/briga/bebe_chorando.png" id="5_sqr6q"]
+[ext_resource type="Texture2D" uid="uid://h28u637033ma" path="res://assets/paginas/briga/lagrima.png" id="6_t6bxc"]
 
 [sub_resource type="Animation" id="Animation_sqr6q"]
 length = 0.001

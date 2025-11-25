@@ -6,7 +6,7 @@
 [ext_resource type="VideoStream" uid="uid://ctu7mh3o25uul" path="res://assets/video.ogv" id="4_oki63"]
 [ext_resource type="Script" uid="uid://x4hfufla7ooa" path="res://scripts/video.gd" id="5_6g0bb"]
 [ext_resource type="Script" uid="uid://bjryvatu5io26" path="res://scripts/botao_video.gd" id="6_laqgg"]
-[ext_resource type="Texture2D" uid="uid://cf6cmapwvly5" path="res://assets/pag4-barra.png" id="7_jnl6s"]
+[ext_resource type="Texture2D" uid="uid://dpnt7s3r3seah" path="res://assets/barra.png" id="7_8tyfl"]
 [ext_resource type="Texture2D" uid="uid://b7kwvxrrynar5" path="res://assets/botoes/ant.png" id="8_c2qyi"]
 [ext_resource type="Texture2D" uid="uid://bh4b8b8fmreo3" path="res://assets/botoes/ant-pressionado.png" id="9_qxlbq"]
 [ext_resource type="Script" uid="uid://8uqly684mmy8" path="res://scripts/botoes.gd" id="10_nv5fi"]
@@ -60,11 +60,11 @@ script = ExtResource("3_vb6bx")
 layout_mode = 2
 theme_override_constants/margin_top = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer"]
+[node name="Conteudo" type="VBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 30
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+[node name="RichTextLabel2" type="RichTextLabel" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer/Conteudo"]
 layout_mode = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 2
@@ -72,7 +72,7 @@ theme_override_font_sizes/normal_font_size = 28
 text = "Êxodo Rural e Precarização nas Cidades"
 fit_content = true
 
-[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer/Conteudo"]
 layout_mode = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 24
@@ -81,7 +81,7 @@ text = "As mudanças no campo e na cidade provocaram rápido crescimento urbano 
 Hoje, com os avanços tecnológicos, esses indivíduos têm poucas chances de emprego por não terem qualificação, revelando as desigualdades criadas pelo desenvolvimento do capitalismo no Brasil."
 fit_content = true
 
-[node name="RichTextLabel3" type="RichTextLabel" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+[node name="RichTextLabel3" type="RichTextLabel" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer/Conteudo"]
 layout_mode = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 24
@@ -135,7 +135,7 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer/Botoes"]
 layout_mode = 2
-texture = ExtResource("7_jnl6s")
+texture = ExtResource("7_8tyfl")
 
 [node name="MarginContainer" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer/Botoes"]
 layout_mode = 2

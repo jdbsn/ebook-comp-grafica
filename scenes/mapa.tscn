@@ -1,9 +1,9 @@
 [gd_scene load_steps=19 format=3 uid="uid://drpmy0rjcy7we"]
 
 [ext_resource type="Script" uid="uid://rc8mrvg2ftwm" path="res://scripts/mapa.gd" id="1_atgyb"]
-[ext_resource type="Texture2D" uid="uid://2o7cveaou7np" path="res://assets/mapa.png" id="1_u1vf7"]
-[ext_resource type="Texture2D" uid="uid://ck3o2rmkdntsy" path="res://assets/ondas.png" id="2_tfnl5"]
-[ext_resource type="Texture2D" uid="uid://cxok0g2l0tiel" path="res://assets/navio.png" id="3_tfnl5"]
+[ext_resource type="Texture2D" uid="uid://2o7cveaou7np" path="res://assets/paginas/mapa/mapa.png" id="1_u1vf7"]
+[ext_resource type="Texture2D" uid="uid://ck3o2rmkdntsy" path="res://assets/paginas/mapa/ondas.png" id="2_tfnl5"]
+[ext_resource type="Texture2D" uid="uid://cxok0g2l0tiel" path="res://assets/paginas/mapa/navio.png" id="3_tfnl5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j65vy"]
 atlas = ExtResource("2_tfnl5")

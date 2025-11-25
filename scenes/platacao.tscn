@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://dq3sahld88glh"]
 
-[ext_resource type="Texture2D" uid="uid://b2gfsbxkmrc1q" path="res://assets/imigrantes.png" id="1_b7uc3"]
+[ext_resource type="Texture2D" uid="uid://b2gfsbxkmrc1q" path="res://assets/paginas/plantacao/imigrantes.png" id="1_b7uc3"]
 [ext_resource type="Script" uid="uid://jv73x5h84s3j" path="res://scripts/imigrantes.gd" id="2_trqrf"]
-[ext_resource type="Texture2D" uid="uid://b5pfayrpe0lwo" path="res://assets/coronel.png" id="2_u6o7v"]
-[ext_resource type="Texture2D" uid="uid://cfnf4c8e36iqq" path="res://assets/dinheiro.png" id="4_2ntd1"]
-[ext_resource type="Texture2D" uid="uid://bdybbkx134p2a" path="res://assets/comida.png" id="5_m8tru"]
+[ext_resource type="Texture2D" uid="uid://b5pfayrpe0lwo" path="res://assets/paginas/plantacao/coronel.png" id="2_u6o7v"]
+[ext_resource type="Texture2D" uid="uid://cfnf4c8e36iqq" path="res://assets/paginas/plantacao/dinheiro.png" id="4_2ntd1"]
+[ext_resource type="Texture2D" uid="uid://bdybbkx134p2a" path="res://assets/paginas/plantacao/comida.png" id="5_m8tru"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_trqrf"]
 size = Vector2(220, 205.333)
