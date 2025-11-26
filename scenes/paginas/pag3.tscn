@@ -204,6 +204,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1, 0.991403)
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -326,8 +327,19 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 24
-text = "Milhares de imigrantes chegaram ao Brasil entre meados do século XIX e início do XX buscando oportunidades melhores, mas enfrentaram condições quase servis, sobretudo nas fazendas de café. Muitas famílias trabalhavam sem salário, recebendo só comida e moradia — uma condição mais res-tritiva que a de outros trabalhadores da época, os mantendo dependentes dos fazendeiros, com pouca autonomia."
+text = "Milhares de imigrantes chegaram ao Brasil entre meados do século XIX e início do XX buscando oportunidades melhores, mas enfrentaram condições quase servis, sobretudo nas fazendas de café. 
+
+Muitas famílias trabalhavam sem salário, recebendo só comida e moradia — uma condição mais res-tritiva que a de outros trabalhadores da época, os mantendo dependentes dos fazendeiros, com pouca autonomia."
 fit_content = true
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="ColorRect/MarginContainer/VBoxContainer/MarginContainer/Conteudo"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 24
+text = "Toque nos imigrantes varias vezes para ver a remuneração"
+fit_content = true
+horizontal_alignment = 1
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -339,7 +351,7 @@ script = ExtResource("6_71evm")
 transparent_bg = true
 handle_input_locally = false
 physics_object_picking = true
-size = Vector2i(708, 401)
+size = Vector2i(708, 342)
 render_target_update_mode = 4
 
 [node name="Platacao" parent="ColorRect/MarginContainer/VBoxContainer/SubViewportContainer/SubViewport" instance=ExtResource("12_s23ky")]
