@@ -339,7 +339,7 @@ script = ExtResource("6_71evm")
 transparent_bg = true
 handle_input_locally = false
 physics_object_picking = true
-size = Vector2i(2, 2)
+size = Vector2i(708, 401)
 render_target_update_mode = 4
 
 [node name="Platacao" parent="ColorRect/MarginContainer/VBoxContainer/SubViewportContainer/SubViewport" instance=ExtResource("12_s23ky")]

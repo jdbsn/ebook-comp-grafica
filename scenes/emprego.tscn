@@ -1,0 +1,67 @@
+[gd_scene load_steps=9 format=3 uid="uid://bw1lunhm2fon"]
+
+[ext_resource type="Texture2D" uid="uid://coejjckswpuxu" path="res://assets/pessoa1.png" id="1_wwlwg"]
+[ext_resource type="Script" uid="uid://cqf2b8pbbjekw" path="res://scripts/arrastar.gd" id="2_1sdua"]
+[ext_resource type="Script" uid="uid://cdspqr50fkflh" path="res://scripts/loja.gd" id="2_17u4m"]
+[ext_resource type="Texture2D" uid="uid://c8vwpqp5qhypw" path="res://assets/pessoa2.png" id="2_onui2"]
+[ext_resource type="Texture2D" uid="uid://bhp14g86sw04t" path="res://assets/loja.png" id="3_1sdua"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t2lxc"]
+size = Vector2(354, 294)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wwlwg"]
+size = Vector2(57, 160)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_onui2"]
+size = Vector2(51, 158)
+
+[node name="Emprego" type="Node2D"]
+
+[node name="Loja" type="Area2D" parent="." node_paths=PackedStringArray("mensagem_label")]
+script = ExtResource("2_17u4m")
+mensagem_label = NodePath("../Mensagem")
+
+[node name="Sprite2D" type="Sprite2D" parent="Loja"]
+texture = ExtResource("3_1sdua")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Loja"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_t2lxc")
+
+[node name="Pessoa1" type="Area2D" parent="."]
+script = ExtResource("2_1sdua")
+id_pessoa = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Pessoa1"]
+position = Vector2(-233, 40)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_wwlwg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pessoa1"]
+position = Vector2(-231.5, 36)
+shape = SubResource("RectangleShape2D_wwlwg")
+
+[node name="Pessoa2" type="Area2D" parent="."]
+script = ExtResource("2_1sdua")
+id_pessoa = 2
+
+[node name="Sprite2D2" type="Sprite2D" parent="Pessoa2"]
+position = Vector2(238, 40)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_onui2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pessoa2"]
+position = Vector2(235.5, 38)
+shape = SubResource("RectangleShape2D_onui2")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Mensagem" type="Label" parent="."]
+offset_left = -177.0
+offset_top = -215.0
+offset_right = 178.0
+offset_bottom = -168.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1

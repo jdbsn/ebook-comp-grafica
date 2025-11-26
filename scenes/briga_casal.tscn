@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dpcqxpstlx022"]
+[gd_scene load_steps=13 format=3 uid="uid://dpcqxpstlx022"]
 
 [ext_resource type="Texture2D" uid="uid://c8h7qqs6q7n7j" path="res://assets/paginas/briga/homem (1).png" id="1_b0y7k"]
 [ext_resource type="Script" uid="uid://o4bf25bqgg5w" path="res://scripts/briga_casal.gd" id="1_bjc1s"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cj8khyn4mdiwb" path="res://assets/paginas/briga/balao.png" id="4_et3ik"]
 [ext_resource type="Texture2D" uid="uid://c56lltbcjmkcv" path="res://assets/paginas/briga/bebe_chorando.png" id="5_sqr6q"]
 [ext_resource type="Texture2D" uid="uid://h28u637033ma" path="res://assets/paginas/briga/lagrima.png" id="6_t6bxc"]
+[ext_resource type="Texture2D" uid="uid://lvlghdbgbo2r" path="res://assets/paginas/briga/pag7.png" id="7_4hrny"]
 
 [sub_resource type="Animation" id="Animation_sqr6q"]
 length = 0.001
@@ -94,7 +95,7 @@ texture = ExtResource("4_et3ik")
 
 [node name="BebeChorando" type="Sprite2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(435, 148)
+position = Vector2(450, 148)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("5_sqr6q")
 
@@ -109,4 +110,9 @@ texture = ExtResource("6_t6bxc")
 process_material = SubResource("ParticleProcessMaterial_y0oae")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(1, -242)
+position = Vector2(1, -226)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -100
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_4hrny")
